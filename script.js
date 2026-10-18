@@ -276,4 +276,375 @@ document.addEventListener('DOMContentLoaded', () => {
     showToast('Membuka aplikasi email Anda...');
     window.location.href = mailtoUrl;
   });
+
+  // ==========================================================================
+  // 10. DYNAMIC AUTOMATIC BACKGROUND ENGINE (ASTRONOMY & NETWORKING PARTICLES)
+  // ==========================================================================
+  function initDynamicBackground() {
+    const canvas = document.getElementById('bg-particle-canvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    // Check prefers-reduced-motion
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let prefersReducedMotion = motionQuery.matches;
+
+    let width = 0;
+    let height = 0;
+    let dpr = 1;
+    let particles = [];
+    let animationFrameId = null;
+    let isRunning = false;
+
+    // Glow Orb Elements for subtle parallax
+    const orbOrange = document.getElementById('glow-orb-orange');
+    const orbLime = document.getElementById('glow-orb-lime');
+    const orbAccent = document.getElementById('glow-orb-accent');
+    const orbBr = document.getElementById('glow-orb-br');
+
+    // Mouse Tracking (Subtle interactive steering)
+    const mouse = {
+      x: -9999,
+      y: -9999,
+      active: false,
+      radius: 120
+    };
+
+    // Color Palette Tokens
+    const colorOrange = 'rgba(255, 99, 61, ';
+    const colorLime = 'rgba(213, 255, 63, ';
+    const colorWhite = 'rgba(244, 241, 233, ';
+
+    function getParticleCount() {
+      const w = window.innerWidth;
+      if (w < 640) return 20;
+      if (w < 1024) return 32;
+      return 46;
+    }
+
+    class Particle {
+      constructor(initial = true) {
+        this.reset(initial);
+      }
+
+      reset(initial = false) {
+        this.x = initial ? Math.random() * width : (Math.random() < 0.5 ? -10 : width + 10);
+        this.y = initial ? Math.random() * height : Math.random() * height;
+
+        // Velocity: Very gentle, continuous drift
+        const speed = 0.22 + Math.random() * 0.38;
+        const angle = Math.random() * Math.PI * 2;
+        this.vx = Math.cos(angle) * speed;
+        this.vy = Math.sin(angle) * speed;
+
+        // Type distribution: 55% dot, 22% cross, 15% diamond, 8% ring
+        const rand = Math.random();
+        if (rand < 0.55) {
+          this.type = 'dot';
+          this.size = 1.2 + Math.random() * 1.6;
+        } else if (rand < 0.77) {
+          this.type = 'cross';
+          this.size = 4 + Math.random() * 3;
+        } else if (rand < 0.92) {
+          this.type = 'diamond';
+          this.size = 3.5 + Math.random() * 2.5;
+        } else {
+          this.type = 'ring';
+          this.size = 3.5 + Math.random() * 2.5;
+        }
+
+        // Color distribution
+        const colRand = Math.random();
+        if (colRand < 0.45) {
+          this.color = colorOrange;
+        } else if (colRand < 0.8) {
+          this.color = colorLime;
+        } else {
+          this.color = colorWhite;
+        }
+
+        this.baseAlpha = 0.2 + Math.random() * 0.3;
+        this.alpha = this.baseAlpha;
+        this.pulseSpeed = 0.015 + Math.random() * 0.02;
+        this.pulsePhase = Math.random() * Math.PI * 2;
+        this.rotation = Math.random() * Math.PI * 2;
+        this.rotSpeed = (Math.random() - 0.5) * 0.012;
+        this.parallaxFactor = 0.04 + Math.random() * 0.08;
+      }
+
+      update(time) {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.rotation += this.rotSpeed;
+
+        // Subtle alpha pulsation
+        this.alpha = this.baseAlpha + Math.sin(time * this.pulseSpeed + this.pulsePhase) * 0.12;
+
+        // Gentle mouse interaction (steer softly away)
+        if (mouse.active) {
+          const dx = this.x - mouse.x;
+          const dy = this.y - mouse.y;
+          const distSq = dx * dx + dy * dy;
+          const rSq = mouse.radius * mouse.radius;
+
+          if (distSq < rSq && distSq > 1) {
+            const dist = Math.sqrt(distSq);
+            const force = (1 - dist / mouse.radius) * 0.35;
+            this.x += (dx / dist) * force;
+            this.y += (dy / dist) * force;
+          }
+        }
+
+        // Wrap around boundaries seamlessly
+        const pad = 24;
+        if (this.x < -pad) this.x = width + pad;
+        if (this.x > width + pad) this.x = -pad;
+        if (this.y < -pad) this.y = height + pad;
+        if (this.y > height + pad) this.y = -pad;
+      }
+
+      draw(scrollYOffset) {
+        // Compute parallax vertical position
+        const yOffset = (scrollYOffset * this.parallaxFactor) % (height + 40);
+        let drawY = this.y - yOffset;
+        if (drawY < -20) drawY += height + 40;
+        if (drawY > height + 20) drawY -= height + 40;
+
+        ctx.save();
+        ctx.translate(this.x, drawY);
+        ctx.rotate(this.rotation);
+
+        const currentAlpha = Math.max(0.05, Math.min(0.65, this.alpha));
+        ctx.fillStyle = this.color + currentAlpha + ')';
+        ctx.strokeStyle = this.color + currentAlpha + ')';
+
+        switch (this.type) {
+          case 'dot':
+            ctx.beginPath();
+            ctx.arc(0, 0, this.size, 0, Math.PI * 2);
+            ctx.fill();
+            break;
+
+          case 'cross':
+            ctx.lineWidth = 1.1;
+            ctx.beginPath();
+            ctx.moveTo(-this.size, 0);
+            ctx.lineTo(this.size, 0);
+            ctx.moveTo(0, -this.size);
+            ctx.lineTo(0, this.size);
+            ctx.stroke();
+            break;
+
+          case 'diamond':
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(0, -this.size);
+            ctx.lineTo(this.size * 0.75, 0);
+            ctx.lineTo(0, this.size);
+            ctx.lineTo(-this.size * 0.75, 0);
+            ctx.closePath();
+            ctx.stroke();
+            break;
+
+          case 'ring':
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.arc(0, 0, this.size, 0, Math.PI * 2);
+            ctx.stroke();
+            break;
+        }
+
+        ctx.restore();
+      }
+    }
+
+    function createParticles() {
+      const count = getParticleCount();
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle(true));
+      }
+    }
+
+    // Network connection lines between nodes (representing connectivity & circuits)
+    function drawConnections(scrollYOffset) {
+      const maxDist = width < 768 ? 85 : 120;
+      const maxDistSq = maxDist * maxDist;
+      const len = particles.length;
+
+      for (let i = 0; i < len; i++) {
+        const p1 = particles[i];
+        const yOffset1 = (scrollYOffset * p1.parallaxFactor) % (height + 40);
+        let y1 = p1.y - yOffset1;
+        if (y1 < -20) y1 += height + 40;
+        if (y1 > height + 20) y1 -= height + 40;
+
+        for (let j = i + 1; j < len; j++) {
+          const p2 = particles[j];
+          const yOffset2 = (scrollYOffset * p2.parallaxFactor) % (height + 40);
+          let y2 = p2.y - yOffset2;
+          if (y2 < -20) y2 += height + 40;
+          if (y2 > height + 20) y2 -= height + 40;
+
+          const dx = p1.x - p2.x;
+          const dy = y1 - y2;
+          const distSq = dx * dx + dy * dy;
+
+          if (distSq < maxDistSq) {
+            const dist = Math.sqrt(distSq);
+            const lineAlpha = (1 - dist / maxDist) * 0.15;
+
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(213, 255, 63, ${lineAlpha})`;
+            ctx.lineWidth = 0.75;
+            ctx.moveTo(p1.x, y1);
+            ctx.lineTo(p2.x, y2);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function resize() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.scale(dpr, dpr);
+
+      createParticles();
+
+      if (prefersReducedMotion) {
+        drawStatic();
+      }
+    }
+
+    let scrollY = window.pageYOffset || 0;
+    let ticking = false;
+
+    function handleScroll() {
+      scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          applyScrollParallax(scrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+
+    function applyScrollParallax(sY) {
+      if (prefersReducedMotion) return;
+      const factorOrange = sY * 0.05;
+      const factorLime = -sY * 0.04;
+      const factorAccent = sY * 0.025;
+      const factorBr = -sY * 0.035;
+
+      if (orbOrange) orbOrange.style.transform = `translate3d(0, ${factorOrange}px, 0)`;
+      if (orbLime) orbLime.style.transform = `translate3d(0, ${factorLime}px, 0)`;
+      if (orbAccent) orbAccent.style.transform = `translate3d(0, ${factorAccent}px, 0)`;
+      if (orbBr) orbBr.style.transform = `translate3d(0, ${factorBr}px, 0)`;
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    function animate(timestamp) {
+      if (!isRunning) return;
+
+      ctx.clearRect(0, 0, width, height);
+
+      const time = timestamp * 0.001;
+      const len = particles.length;
+      for (let i = 0; i < len; i++) {
+        particles[i].update(time);
+        particles[i].draw(scrollY);
+      }
+
+      drawConnections(scrollY);
+
+      animationFrameId = window.requestAnimationFrame(animate);
+    }
+
+    function startAnimation() {
+      if (prefersReducedMotion) {
+        drawStatic();
+        return;
+      }
+      if (!isRunning) {
+        isRunning = true;
+        animationFrameId = window.requestAnimationFrame(animate);
+      }
+    }
+
+    function stopAnimation() {
+      isRunning = false;
+      if (animationFrameId) {
+        window.cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+      }
+    }
+
+    function drawStatic() {
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].draw(0);
+      }
+      drawConnections(0);
+    }
+
+    // Motion query listener
+    motionQuery.addEventListener('change', (e) => {
+      prefersReducedMotion = e.matches;
+      if (prefersReducedMotion) {
+        stopAnimation();
+        drawStatic();
+      } else {
+        startAnimation();
+      }
+    });
+
+    // Mouse Tracking
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+      mouse.active = true;
+    }, { passive: true });
+
+    window.addEventListener('mouseleave', () => {
+      mouse.active = false;
+      mouse.x = -9999;
+      mouse.y = -9999;
+    });
+
+    // Auto-pause when tab is hidden to save 100% CPU/battery
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        stopAnimation();
+      } else {
+        startAnimation();
+      }
+    });
+
+    // Resize listener with debounce
+    let resizeTimer = null;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(resize, 150);
+    }, { passive: true });
+
+    // Initial setup & start
+    resize();
+    startAnimation();
+  }
+
+  // Initialize Dynamic Background Engine
+  initDynamicBackground();
 });

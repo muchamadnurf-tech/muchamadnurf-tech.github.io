@@ -38,10 +38,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
-  <!-- Subtle Background Grid & Noise Accent -->
-  <div class="bg-noise" aria-hidden="true"></div>
-  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
-  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+  <!-- ========================================================= -->
+  <!-- DYNAMIC AMBIENT & INTERACTIVE BACKGROUND SYSTEM -->
+  <!-- ========================================================= -->
+  <div class="dynamic-bg-wrapper" id="dynamic-bg" aria-hidden="true">
+    <!-- Living Aurora Gradient Mesh -->
+    <div class="bg-aurora-mesh"></div>
+
+    <!-- Organic Floating Neon Glow Orbs -->
+    <div class="bg-glow-orb orb-orange" id="glow-orb-orange"></div>
+    <div class="bg-glow-orb orb-lime" id="glow-orb-lime"></div>
+    <div class="bg-glow-orb orb-accent" id="glow-orb-accent"></div>
+    <div class="bg-glow-orb orb-corner-br" id="glow-orb-br"></div>
+
+    <!-- Geometric & Networking Particle Canvas -->
+    <canvas id="bg-particle-canvas" class="bg-particle-canvas"></canvas>
+
+    <!-- Technical Brutalist Grid & Grain Texture Overlay -->
+    <div class="bg-tech-grid"></div>
+    <div class="bg-noise"></div>
+
+    <!-- Contrast-Protective Dark Vignette -->
+    <div class="bg-vignette-overlay"></div>
+  </div>
 
   <!-- ========================================================= -->
   <!-- A. NAVBAR -->
