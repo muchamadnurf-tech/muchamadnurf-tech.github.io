@@ -31,7 +31,7 @@ muchamadnurf-tech.github.io/
 ├── favicon.svg          # Favicon vector modern brutalist logo "F."
 ├── README.md            # Dokumentasi & panduan deployment
 └── assets/
-    ├── profile-demo.jpg # Foto profil AI demo resolusi tinggi (siap diganti foto asli)
+    ├── profile.jpg      # Foto profil asli Muchamad Nur Fazri (Jas Almamater UPB)
     ├── project-1.jpg    # Placeholder visual proyek: Business Case Study
     ├── project-2.jpg    # Placeholder visual proyek: Networking Exploration
     └── project-3.jpg    # Placeholder visual proyek: Teamwork & Organization
@@ -61,29 +61,14 @@ Buka browser dan akses `http://localhost:8000`.
 
 ---
 
-## 📸 2. Cara Mengganti Foto Profil AI Contoh dengan Foto Pribadi
+## 📸 2. Pengelolaan Foto Profil
 
-Foto yang saat ini tampil di Hero Section (`assets/profile-demo.jpg`) adalah **foto profil contoh yang dibuat menggunakan AI** sebagai representasi visual sementara.
+Foto profil utama Anda saat ini aktif menggunakan foto asli berjas almamater Universitas Pelita Bangsa pada file `assets/profile.jpg`.
 
-Untuk menggantinya dengan foto asli Anda:
-1. Siapkan foto formal atau *smart-casual* Anda (disarankan rasio **3:4** atau **4:5**, format `.jpg` atau `.png`).
-2. Ganti nama file foto Anda menjadi `profile-demo.jpg` dan letakkan di dalam folder `assets/` (menimpa file lama).
-3. **Atau**, jika menggunakan nama file berbeda (misal `assets/foto-fazri.jpg`):
-   - Buka file `index.html`.
-   - Cari baris kode berikut pada bagian Hero Section:
-     ```html
-     <img 
-       src="assets/profile-demo.jpg" 
-       alt="Foto profil demo Muchamad Nur Fazri..."
-       class="portrait-img"
-       id="hero-profile-image"
-     >
-     ```
-   - Ubah atribut `src` menjadi:
-     ```html
-     src="assets/foto-fazri.jpg"
-     ```
-   - Anda juga dapat menyembunyikan atau menghapus badge `<span class="badge-tag">AI DEMO PORTRAIT</span>` jika foto asli sudah dipasang.
+Jika di kemudian hari ingin mengganti atau memperbarui foto:
+1. Siapkan foto terbaru Anda (disarankan rasio **3:4** atau **4:5**, format `.jpg` atau `.png`).
+2. Ganti nama file foto Anda menjadi `profile.jpg` dan simpan di folder `assets/` (menimpa file lama).
+3. Atau ubah atribut `src` pada elemen `<img>` di bagian Hero Section file `index.html`.
 
 ---
 
