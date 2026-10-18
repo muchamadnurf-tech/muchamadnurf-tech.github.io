@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#101014" />
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#FF633D" stroke-opacity="0.3" stroke-width="2" />
+  <!-- Letter F brutalist styling -->
+  <path d="M 18 16 H 46 V 23 H 26 V 30 H 42 V 37 H 26 V 48 H 18 Z" fill="#F4F1E9" />
+  <!-- Neon Lime accent dot -->
+  <circle cx="46" cy="46" r="5" fill="#D5FF3F" />
+</svg>

@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>Muchamad Nur Fazri — Portfolio & Personal Branding</title>
+  <meta name="title" content="Muchamad Nur Fazri — Portfolio & Personal Branding">
+  <meta name="description" content="Website portofolio dan personal branding Muchamad Nur Fazri. Mahasiswa Manajemen Universitas Pelita Bangsa dengan minat pada networking, electrical engineering, dan kolaborasi tim.">
+  <meta name="keywords" content="Muchamad Nur Fazri, Fazri, Portfolio, Mahasiswa Manajemen, Universitas Pelita Bangsa, Networking, Electrical Engineering, Futsal, Personal Branding">
+  <meta name="author" content="Muchamad Nur Fazri">
+  <meta name="theme-color" content="#101014">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://muchamadnurf-tech.github.io/">
+  <meta property="og:title" content="Muchamad Nur Fazri — Portfolio & Personal Branding">
+  <meta property="og:description" content="Berpikir strategis, terus belajar, dan mengubah rasa ingin tahu menjadi aksi. Portfolio personal Muchamad Nur Fazri.">
+  <meta property="og:image" content="assets/profile-demo.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Muchamad Nur Fazri — Portfolio & Personal Branding">
+  <meta property="twitter:description" content="Berpikir strategis, terus belajar, dan mengubah rasa ingin tahu menjadi aksi.">
+  <meta property="twitter:image" content="assets/profile-demo.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Space Grotesk & DM Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <!-- Subtle Background Grid & Noise Accent -->
+  <div class="bg-noise" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <!-- ========================================================= -->
+  <!-- A. NAVBAR -->
+  <!-- ========================================================= -->
+  <header class="navbar-wrapper" id="navbar">
+    <nav class="navbar container" aria-label="Navigasi Utama">
+      <a href="#top" class="brand-logo" aria-label="Kembali ke atas">
+        <span class="logo-badge">F.</span>
+        <span class="brand-name">FAZRI<span class="brand-dot"></span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#tentang" class="nav-link">Tentang</a></li>
+        <li><a href="#keahlian" class="nav-link">Keahlian</a></li>
+        <li><a href="#proyek" class="nav-link">Proyek</a></li>
+        <li><a href="#pendidikan" class="nav-link">Pendidikan</a></li>
+        <li><a href="#kontak" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <!-- Action Button & Hamburger -->
+      <div class="nav-actions">
+        <a href="#kontak" class="btn btn-sm btn-ghost nav-cta-btn">Hubungi</a>
+        
+        <button type="button" class="hamburger" id="hamburger-btn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <span class="drawer-label">// MENU NAVIGASI</span>
+        <button type="button" class="drawer-close-btn" id="drawer-close" aria-label="Tutup menu navigasi">✕</button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#tentang" class="mobile-nav-link"><span class="nav-idx">01</span> Tentang</a></li>
+        <li><a href="#keahlian" class="mobile-nav-link"><span class="nav-idx">02</span> Keahlian & Minat</a></li>
+        <li><a href="#proyek" class="mobile-nav-link"><span class="nav-idx">03</span> Proyek</a></li>
+        <li><a href="#pendidikan" class="mobile-nav-link"><span class="nav-idx">04</span> Pendidikan</a></li>
+        <li><a href="#kontak" class="mobile-nav-link"><span class="nav-idx">05</span> Kontak</a></li>
+      </ul>
+      <div class="drawer-footer">
+        <div class="drawer-status">
+          <span class="status-indicator"></span>
+          <span>Terbuka untuk Peluang Magang</span>
+        </div>
+        <a href="#kontak" class="btn btn-primary btn-block drawer-action-btn">Mulai Terhubung</a>
+      </div>
+    </div>
+    <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+  </header>
+
+  <main id="main-content">
+    <!-- ========================================================= -->
+    <!-- B. HERO SECTION -->
+    <!-- ========================================================= -->
+    <section class="hero-section section-padding" id="hero">
+      <div class="container hero-container">
+        <!-- Hero Text Content -->
+        <div class="hero-content reveal-fade">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span class="mono-label">AVAILABLE FOR INTERNSHIP & COLLABORATION</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-surname">MUCHAMAD</span>
+            <span class="hero-name-accent">NUR FAZRI</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Management Student <span class="divider">|</span> Curious Mind <span class="divider">|</span> Future Professional
+          </p>
+
+          <p class="hero-description">
+            Berpikir strategis, terus belajar, dan mengubah rasa ingin tahu menjadi aksi.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#proyek" class="btn btn-primary">
+              <span>Jelajahi Portofolio</span>
+              <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <a href="#kontak" class="btn btn-outline">
+              <span>Hubungi Saya</span>
+            </a>
+          </div>
+
+          <!-- Micro Quick Facts Tags -->
+          <div class="hero-quick-tags">
+            <div class="tag-item">
+              <span class="tag-icon">🎓</span>
+              <span class="tag-text">Universitas Pelita Bangsa</span>
+            </div>
+            <div class="tag-item">
+              <span class="tag-icon">⚡</span>
+              <span class="tag-text">Manajemen Bisnis</span>
+            </div>
+            <div class="tag-item">
+              <span class="tag-icon">🔌</span>
+              <span class="tag-text">Tech Enthusiast</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Profile Portrait Card -->
+        <div class="hero-visual reveal-fade" style="--delay: 0.2s">
+          <div class="portrait-card">
+            <!-- Brutalist Frame Accents -->
+            <div class="corner-bracket top-left">+</div>
+            <div class="corner-bracket top-right">+</div>
+            <div class="corner-bracket bottom-left">+</div>
+            <div class="corner-bracket bottom-right">+</div>
+
+            <div class="portrait-inner">
+              <!-- Ganti path gambar berikut saat Anda ingin memasang foto asli -->
+              <img 
+                src="assets/profile-demo.jpg" 
+                alt="Foto profil demo Muchamad Nur Fazri - Mahasiswa Manajemen Universitas Pelita Bangsa" 
+                class="portrait-img"
+                id="hero-profile-image"
+                width="600"
+                height="800"
+                loading="eager"
+              >
+              <div class="portrait-overlay"></div>
+            </div>
+
+            <!-- AI Demo Photo Badge & Info -->
+            <div class="portrait-badge">
+              <span class="badge-tag">AI DEMO PORTRAIT</span>
+              <span class="badge-sub">Siap diganti foto pribadi</span>
+            </div>
+
+            <!-- Floating Geometric Motto Badge -->
+            <div class="floating-motto-badge">
+              <span class="motto-code">// MOTTO</span>
+              <strong class="motto-quote">"ALL IS WELL"</strong>
+            </div>
+
+            <!-- Geometric Graphic Element -->
+            <div class="geometric-shape circle-accent" aria-hidden="true"></div>
+            <div class="geometric-shape wireframe-square" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- CONTINUOUS TICKER / MARQUEE -->
+    <!-- ========================================================= -->
+    <div class="marquee-wrapper" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>ALL IS WELL</span>
+          <span class="marquee-dot">◆</span>
+          <span>KEEP MOVING</span>
+          <span class="marquee-dot">◆</span>
+          <span>KEEP LEARNING</span>
+          <span class="marquee-dot">◆</span>
+          <span>MUCHAMAD NUR FAZRI</span>
+          <span class="marquee-dot">◆</span>
+          <span>MANAGEMENT STUDENT</span>
+          <span class="marquee-dot">◆</span>
+          <span>NETWORKING & SYSTEMS</span>
+          <span class="marquee-dot">◆</span>
+          <span>DISCIPLINE & TEAMWORK</span>
+          <span class="marquee-dot">◆</span>
+        </div>
+        <!-- Duplicated track for continuous seamless scroll -->
+        <div class="marquee-content" aria-hidden="true">
+          <span>ALL IS WELL</span>
+          <span class="marquee-dot">◆</span>
+          <span>KEEP MOVING</span>
+          <span class="marquee-dot">◆</span>
+          <span>KEEP LEARNING</span>
+          <span class="marquee-dot">◆</span>
+          <span>MUCHAMAD NUR FAZRI</span>
+          <span class="marquee-dot">◆</span>
+          <span>MANAGEMENT STUDENT</span>
+          <span class="marquee-dot">◆</span>
+          <span>NETWORKING & SYSTEMS</span>
+          <span class="marquee-dot">◆</span>
+          <span>DISCIPLINE & TEAMWORK</span>
+          <span class="marquee-dot">◆</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- C. ABOUT ME -->
+    <!-- ========================================================= -->
+    <section class="about-section section-padding" id="tentang">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <span class="section-index">// 01. TENTANG SAYA</span>
+          <h2 class="section-title">Bukan cuma punya rencana.<br><span class="highlight-text">Mulai bergerak.</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Main Narrative Column -->
+          <div class="about-narrative reveal-fade">
+            <p class="about-lead">
+              Saya <strong>Muchamad Nur Fazri</strong>, mahasiswa Manajemen di Universitas Pelita Bangsa. Saya tertarik pada pengembangan diri, kolaborasi, teknologi, dan cara kerja sistem. Saya ingin terus mengembangkan kemampuan melalui proses belajar, pengalaman, dan kerja sama.
+            </p>
+            <p class="about-body">
+              Bagi saya, manajemen bukan sekadar teori di ruang kuliah, melainkan seni mengorganisasi sumber daya, membangun alur kerja yang efektif, dan menemukan solusi praktis atas setiap tantangan. Kombinasi antara pemahaman bisnis, ketertarikan pada infrastruktur teknis, serta kebiasaan berkolaborasi di lapangan olahraga membentuk cara pandang saya dalam mengeksekusi tanggung jawab.
+            </p>
+
+            <!-- Motto Callout Card -->
+            <div class="motto-card">
+              <div class="motto-card-header">
+                <span class="motto-icon">✧</span>
+                <span class="motto-tag">PRINSIP HIDUP</span>
+              </div>
+              <blockquote class="motto-statement">"ALL IS WELL"</blockquote>
+              <p class="motto-annotation">
+                Pengingat untuk tetap berkepala dingin, adaptif dalam situasi tak terduga, dan selalu fokus pada solusi positif di setiap langkah.
+              </p>
+            </div>
+          </div>
+
+          <!-- About Highlights Column -->
+          <div class="about-highlights reveal-fade" style="--delay: 0.15s">
+            <div class="feature-card">
+              <div class="feature-number">01</div>
+              <div class="feature-content">
+                <h3 class="feature-title">Growth & Adaptability</h3>
+                <p class="feature-desc">Fokus pada pertumbuhan berkelanjutan, siap menerima umpan balik, dan aktif mengeksplorasi ilmu baru di luar zona nyaman.</p>
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-number">02</div>
+              <div class="feature-content">
+                <h3 class="feature-title">Sistem & Logika Proses</h3>
+                <p class="feature-desc">Menganalisis masalah dari akarnya, memahami hubungan antar komponen, dan menyukai struktur kerja yang terorganisir.</p>
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-number">03</div>
+              <div class="feature-content">
+                <h3 class="feature-title">Kerja Sama & Sportivitas</h3>
+                <p class="feature-desc">Membawa etos disiplin dan komunikasi aktif lapangan futsal ke dalam dinamika tim kerja dan proyek organisasi.</p>
+              </div>
+            </div>
+
+            <!-- Quick Profile Data Table -->
+            <div class="profile-data-box">
+              <div class="data-row">
+                <span class="data-label">Nama Lengkap</span>
+                <span class="data-value">Muchamad Nur Fazri</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">Perguruan Tinggi</span>
+                <span class="data-value">Universitas Pelita Bangsa</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">Program Studi</span>
+                <span class="data-value">Manajemen (S1)</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">Tujuan</span>
+                <span class="data-value highlight-lime">Magang & Pengembangan Karier</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- D. SKILLS & INTERESTS -->
+    <!-- ========================================================= -->
+    <section class="skills-section section-padding" id="keahlian">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <span class="section-index">// 02. KEAHLIAN & MINAT</span>
+          <h2 class="section-title">Fondasi & Ketertarikan yang Terus Berkembang</h2>
+          <p class="section-subtitle">
+            Area ketertarikan, eksplorasi belajar mandiri, dan aktivitas yang membentuk kepribadian serta daya analitis saya.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Card 1: Networking -->
+          <div class="skill-card reveal-fade" data-skill="networking">
+            <div class="skill-card-top">
+              <span class="skill-category">TECH & CONNECTIVITY</span>
+              <span class="skill-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </span>
+            </div>
+            <h3 class="skill-title">Networking</h3>
+            <p class="skill-desc">
+              Minat pada jaringan komputer, konektivitas, dan sistem jaringan.
+            </p>
+            <div class="skill-points">
+              <div class="skill-pill">Pemahaman Arsitektur LAN/WAN</div>
+              <div class="skill-pill">Eksplorasi Topologi Jaringan</div>
+              <div class="skill-pill">Logika Aliran Data & Protokol</div>
+              <div class="skill-pill">Troubleshooting Koneksi Dasar</div>
+            </div>
+            <div class="skill-footer">
+              <span class="skill-badge-status">Eksplorasi Aktif</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Electrical Engineering -->
+          <div class="skill-card reveal-fade" style="--delay: 0.15s" data-skill="electrical">
+            <div class="skill-card-top">
+              <span class="skill-category">SYSTEMS & HARDWARE</span>
+              <span class="skill-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </span>
+            </div>
+            <h3 class="skill-title">Electrical Engineering</h3>
+            <p class="skill-desc">
+              Minat pada sistem kelistrikan dan pemecahan masalah teknis.
+            </p>
+            <div class="skill-points">
+              <div class="skill-pill">Dasar-dasar Rangkaian Listrik</div>
+              <div class="skill-pill">Analisis Aliran Daya & Komponen</div>
+              <div class="skill-pill">Pemecahan Masalah Hardware</div>
+              <div class="skill-pill">Standar Keselamatan Kelistrikan</div>
+            </div>
+            <div class="skill-footer">
+              <span class="skill-badge-status">Minat Teknis</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Futsal -->
+          <div class="skill-card reveal-fade" style="--delay: 0.3s" data-skill="futsal">
+            <div class="skill-card-top">
+              <span class="skill-category">SPORT & TEAM DYNAMICS</span>
+              <span class="skill-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+              </span>
+            </div>
+            <h3 class="skill-title">Futsal</h3>
+            <p class="skill-desc">
+              Hobi yang mendukung kerja sama tim, komunikasi, kedisiplinan, dan sportivitas.
+            </p>
+            <div class="skill-points">
+              <div class="skill-pill">Kerja Sama Tim & Kepercayaan</div>
+              <div class="skill-pill">Komunikasi Cepat di Bawah Tekanan</div>
+              <div class="skill-pill">Kedisiplinan & Ketahanan Mental</div>
+              <div class="skill-pill">Sportivitas & Respect</div>
+            </div>
+            <div class="skill-footer">
+              <span class="skill-badge-status">Aktivitas & Mindset</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ethical Transparency Note -->
+        <div class="skills-disclaimer reveal-fade">
+          <span class="disclaimer-icon">ℹ</span>
+          <span><strong>Transparansi Portofolio:</strong> Seluruh poin keahlian dan minat di atas merefleksikan minat otentik, proses belajar mandiri, dan aktivitas yang sedang ditekuni. Tidak ada klaim sertifikasi profesional tanpa bukti pendukung.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- E. PROJECTS -->
+    <!-- ========================================================= -->
+    <section class="projects-section section-padding" id="proyek">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <div class="header-split">
+            <div>
+              <span class="section-index">// 03. EKSPLORASI & STUDI KASUS</span>
+              <h2 class="section-title">Portofolio Proyek & Showcase</h2>
+            </div>
+            <!-- Notification Badge about sample project items -->
+            <div class="sample-notice-pill">
+              <span class="sample-pulse"></span>
+              <span>CONTOH STUDI KASUS • SIAP DIKUSTOMISASI</span>
+            </div>
+          </div>
+          <p class="section-subtitle">
+            Kumpulan kartu proyek di bawah ini merupakan <em>placeholder showcase</em> terstruktur. Dirancang untuk memudahkan Anda memperbarui materi dengan studi kasus nyata, riset kuliah, maupun tugas organisasi.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Business Case Study -->
+          <article class="project-card reveal-fade">
+            <div class="project-image-wrapper">
+              <img 
+                src="assets/project-1.jpg" 
+                alt="Mockup studi kasus manajemen dan analisis bisnis strategis" 
+                class="project-img" 
+                width="800" 
+                height="450" 
+                loading="lazy"
+              >
+              <div class="project-category-badge">MANAJEMEN STRATEGIS</div>
+              <div class="project-watermark-pill">CONTOH PROYEK</div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-date">Eksplorasi Konseptual</span>
+                <span class="project-role">Peran: Analis (Simulasi)</span>
+              </div>
+              <h3 class="project-title">Business Case Study</h3>
+              <p class="project-description">
+                Simulasi analisis model bisnis dan efisiensi operasional UMKM: memetakan alur rantai pasok, analisis SWOT mendalam, serta penyusunan rekomendasi strategi pertumbuhan berkelanjutan.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Analisis SWOT</span>
+                <span class="tag">Manajemen Operasional</span>
+                <span class="tag">Riset Pasar</span>
+              </div>
+              <div class="project-action-row">
+                <button type="button" class="btn-text-link open-project-modal" data-modal="modal-project-1">
+                  <span>Lihat Detail Konsep</span>
+                  <span class="link-arrow">→</span>
+                </button>
+                <span class="project-note-badge">Template Siap Diedit</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Networking Exploration -->
+          <article class="project-card reveal-fade" style="--delay: 0.15s">
+            <div class="project-image-wrapper">
+              <img 
+                src="assets/project-2.jpg" 
+                alt="Mockup eksplorasi jaringan komputer, konfigurasi switch dan kabel server" 
+                class="project-img" 
+                width="800" 
+                height="450" 
+                loading="lazy"
+              >
+              <div class="project-category-badge">INFRASTRUKTUR TEKNOLOGI</div>
+              <div class="project-watermark-pill">CONTOH PROYEK</div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-date">Eksplorasi Mandiri</span>
+                <span class="project-role">Peran: Praktik Lab & Riset</span>
+              </div>
+              <h3 class="project-title">Networking Exploration</h3>
+              <p class="project-description">
+                Dokumentasi simulasi jaringan lokal sederhana: perancangan topologi bintang, pemahaman skema subnetting IP, serta pengujian konektivitas perangkat dalam arsitektur tertutup.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Local Area Network</span>
+                <span class="tag">IP Addressing</span>
+                <span class="tag">Device Troubleshooting</span>
+              </div>
+              <div class="project-action-row">
+                <button type="button" class="btn-text-link open-project-modal" data-modal="modal-project-2">
+                  <span>Lihat Detail Konsep</span>
+                  <span class="link-arrow">→</span>
+                </button>
+                <span class="project-note-badge">Template Siap Diedit</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Teamwork & Organization -->
+          <article class="project-card reveal-fade" style="--delay: 0.3s">
+            <div class="project-image-wrapper">
+              <img 
+                src="assets/project-3.jpg" 
+                alt="Mockup kolaborasi tim, kepemimpinan organisasi, dan strategi kelompok" 
+                class="project-img" 
+                width="800" 
+                height="450" 
+                loading="lazy"
+              >
+              <div class="project-category-badge">KEPEMIMPINAN & KOLABORASI</div>
+              <div class="project-watermark-pill">CONTOH PROYEK</div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-date">Aktivitas Kampus / Tim</span>
+                <span class="project-role">Peran: Koordinator & Tim</span>
+              </div>
+              <h3 class="project-title">Teamwork & Organization</h3>
+              <p class="project-description">
+                Penerapan prinsip kerja tim dan sportivitas ke dalam kolaborasi kelompok: pembagian peran tugas berbasis kekuatan personal, manajemen jadwal proyek, dan resolusi konflik secara konstruktif.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Team Coordination</span>
+                <span class="tag">Time Management</span>
+                <span class="tag">Sports Mindset</span>
+              </div>
+              <div class="project-action-row">
+                <button type="button" class="btn-text-link open-project-modal" data-modal="modal-project-3">
+                  <span>Lihat Detail Konsep</span>
+                  <span class="link-arrow">→</span>
+                </button>
+                <span class="project-note-badge">Template Siap Diedit</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- F. EDUCATION -->
+    <!-- ========================================================= -->
+    <section class="education-section section-padding" id="pendidikan">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <span class="section-index">// 04. LATAR BELAKANG PENDIDIKAN</span>
+          <h2 class="section-title">Pendidikan Formal & Pembelajaran</h2>
+          <p class="section-subtitle">
+            Fondasi akademik yang membentuk kerangka berpikir analitis, manajemen strategis, dan komitmen profesional.
+          </p>
+        </div>
+
+        <div class="education-layout">
+          <!-- Main University Card -->
+          <div class="education-main-card reveal-fade">
+            <div class="edu-card-header">
+              <div class="edu-badge-tag">PENDIDIKAN TINGGI SAAT INI</div>
+              <div class="edu-status-pill">
+                <span class="status-dot"></span>
+                <span>Aktif Kuliah</span>
+              </div>
+            </div>
+
+            <div class="edu-content">
+              <h3 class="edu-institution">Universitas Pelita Bangsa</h3>
+              <p class="edu-program">Program Studi S1 Manajemen</p>
+              <p class="edu-summary">
+                Mempelajari prinsip manajemen bisnis, perencanaan strategis organisasi, pengelolaan sumber daya manusia, manajemen operasional, dan kepemimpinan adaptif.
+              </p>
+
+              <!-- Education Slot Placeholders (Mudah Diedit) -->
+              <div class="edu-slots-grid">
+                <div class="edu-slot-item">
+                  <span class="slot-label">Tahun Masuk / Periode</span>
+                  <span class="slot-value">[Isi Tahun Masuk — Misal: 2023 - Sekarang]</span>
+                </div>
+                <div class="edu-slot-item">
+                  <span class="slot-label">Semester Berjalan</span>
+                  <span class="slot-value">[Isi Semester — Misal: Semester 4 / 6]</span>
+                </div>
+                <div class="edu-slot-item">
+                  <span class="slot-label">Fokus / Konsentrasi Minat</span>
+                  <span class="slot-value">[Misal: Manajemen Operasional / Pemasaran / SDM]</span>
+                </div>
+                <div class="edu-slot-item">
+                  <span class="slot-label">Lokasi Kampus</span>
+                  <span class="slot-value">Cikarang, Bekasi, Jawa Barat</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Learning / Certificates / Training Area -->
+          <div class="education-side-box reveal-fade" style="--delay: 0.15s">
+            <div class="side-box-header">
+              <h4 class="side-box-title">Pelatihan, Prestasi & Sertifikat</h4>
+              <span class="side-box-note">// AREA SIAP DIISI</span>
+            </div>
+            <p class="side-box-desc">
+              Bagian ini disediakan khusus untuk mendokumentasikan sertifikasi kursus, kepanitiaan, atau pencapaian yang sedang Anda ikuti:
+            </p>
+
+            <div class="placeholder-timeline">
+              <div class="timeline-entry">
+                <div class="timeline-indicator"></div>
+                <div class="timeline-info">
+                  <h5 class="timeline-title">[Slot Sertifikasi / Pelatihan 1]</h5>
+                  <span class="timeline-meta">[Penyelenggara / Lembaga • Tahun]</span>
+                  <p class="timeline-desc">Contoh: Kursus Dasar Jaringan Komputer, Dasar Kelistrikan, atau Manajemen Proyek.</p>
+                </div>
+              </div>
+
+              <div class="timeline-entry">
+                <div class="timeline-indicator"></div>
+                <div class="timeline-info">
+                  <h5 class="timeline-title">[Slot Organisasi / Prestasi 2]</h5>
+                  <span class="timeline-meta">[Nama Acara / Kompetisi / Organisasi • Tahun]</span>
+                  <p class="timeline-desc">Contoh: Kepanitiaan Kampus, Turnamen Futsal Mahasiswa, atau Workshop Bisnis.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="side-box-tip">
+              <span class="tip-icon">💡</span>
+              <span class="tip-text">Petunjuk pengisian detail tersedia di file <code>README.md</code>. Cukup edit teks di dalam <code>index.html</code>.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- G. CONTACT -->
+    <!-- ========================================================= -->
+    <section class="contact-section section-padding" id="kontak">
+      <div class="container">
+        <div class="contact-card-wrapper reveal-fade">
+          <div class="contact-grid">
+            <!-- Left Info Column -->
+            <div class="contact-info">
+              <span class="section-index">// 05. HUBUNGI SAYA</span>
+              <h2 class="contact-title">Mari mulai sesuatu yang baik.</h2>
+              <p class="contact-desc">
+                Saya selalu antusias menyambut diskusi seputar peluang magang, studi kasus manajemen, kolaborasi proyek teknologi, maupun kegiatan tim olahraga. Jangan ragu untuk mengirimkan pesan!
+              </p>
+
+              <!-- Direct Contact Buttons -->
+              <div class="contact-actions">
+                <a href="mailto:muchamadnur.fazri@example.com?subject=Halo%20Fazri%20-%20Peluang%20Kolaborasi%20%26%20Diskusi" class="btn btn-primary" id="email-primary-btn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <span>Kirim Email Langsung</span>
+                </a>
+
+                <button type="button" class="btn btn-outline" id="copy-email-btn" data-email="muchamadnur.fazri@example.com">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span id="copy-email-text">Salin Alamat Email</span>
+                </button>
+              </div>
+
+              <!-- Social Links -->
+              <div class="contact-socials">
+                <span class="socials-label">PROFIL RESMI:</span>
+                <div class="social-links-list">
+                  <!-- Tautan LinkedIn (Ganti link dengan URL profil Anda) -->
+                  <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Profil LinkedIn Muchamad Nur Fazri">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <span>LinkedIn (Siap Dikonfigurasi)</span>
+                  </a>
+
+                  <!-- Tautan GitHub (Ganti link jika diperlukan) -->
+                  <a href="https://github.com/muchamadnurf-tech" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Profil GitHub muchamadnurf-tech">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span>GitHub: muchamadnurf-tech</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Interactive Quick Note / Quick Form -->
+            <div class="contact-box-wrapper">
+              <div class="contact-box">
+                <div class="box-header">
+                  <span class="box-dot"></span>
+                  <span class="box-title">Kirim Catatan Cepat</span>
+                </div>
+                <form id="contact-form" class="quick-form">
+                  <div class="form-group">
+                    <label for="sender-name" class="form-label">Nama Anda</label>
+                    <input type="text" id="sender-name" class="form-input" placeholder="Masukkan nama Anda" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="sender-subject" class="form-label">Topik Diskusi</label>
+                    <select id="sender-subject" class="form-input" required>
+                      <option value="Peluang Magang">Peluang Magang / Rekrutmen</option>
+                      <option value="Kolaborasi Proyek">Kolaborasi Proyek & Studi Kasus</option>
+                      <option value="Diskusi Seputar Manajemen">Diskusi Seputar Manajemen & Bisnis</option>
+                      <option value="Eksplorasi Teknologi">Eksplorasi Jaringan & Sistem</option>
+                      <option value="Lainnya">Lainnya</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="sender-message" class="form-label">Pesan Singkat</label>
+                    <textarea id="sender-message" class="form-input form-textarea" rows="4" placeholder="Tuliskan pesan atau ajakan diskusi Anda di sini..." required></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-block">
+                    <span>Buka Aplikasi Email & Kirim</span>
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  </button>
+                  <p class="form-hint">*Formulir ini bekerja langsung menggunakan protokol <code>mailto:</code> tanpa backend server.</p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- H. FOOTER -->
+  <!-- ========================================================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#top" class="brand-logo" aria-label="Kembali ke atas">
+            <span class="logo-badge">F.</span>
+            <span class="brand-name">FAZRI</span>
+          </a>
+          <p class="footer-tagline">
+            Mahasiswa Manajemen Universitas Pelita Bangsa.<br>
+            Berpikir strategis, bertindak terarah.
+          </p>
+        </div>
+
+        <div class="footer-motto-callout">
+          <span class="footer-motto-label">// MOTTO HIDUP</span>
+          <h3 class="footer-motto-text">"ALL IS WELL"</h3>
+        </div>
+
+        <div class="footer-nav">
+          <span class="footer-nav-title">Navigasi Halaman</span>
+          <ul class="footer-links">
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#keahlian">Keahlian & Minat</a></li>
+            <li><a href="#proyek">Proyek Showcase</a></li>
+            <li><a href="#pendidikan">Pendidikan</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="current-year">2026</span> <strong>Muchamad Nur Fazri</strong>. Dibuat dengan modern vanilla HTML/CSS/JS untuk GitHub Pages.
+        </p>
+        <a href="#top" class="back-to-top" aria-label="Kembali ke bagian paling atas halaman">
+          <span>Ke Atas</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- PROJECT DETAIL MODAL (LIGHTWEIGHT CLIENT-SIDE DIALOG) -->
+  <!-- ========================================================= -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span class="modal-badge" id="modal-category">KATEGORI</span>
+        <button type="button" class="modal-close" id="modal-close-btn" aria-label="Tutup dialog proyek">✕</button>
+      </div>
+      <div class="modal-body">
+        <h3 class="modal-title" id="modal-title">Judul Proyek</h3>
+        <p class="modal-status-alert">📌 <strong>Status:</strong> <span id="modal-status-text">Contoh Studi Kasus / Placeholder</span></p>
+        <p class="modal-description" id="modal-description">Deskripsi proyek akan ditampilkan di sini.</p>
+        <div class="modal-tags" id="modal-tags"></div>
+        <div class="modal-guide-box">
+          <p><strong>Cara mengedit kartu ini:</strong> Buka file <code>index.html</code> pada bagian <code>&lt;!-- E. PROJECTS --&gt;</code>, lalu perbarui teks judul, deskripsi, tag, dan gambar sesuai karya asli Anda.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="modal-ok-btn">Mengerti</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification for Copy Action -->
+  <div class="toast-notification" id="toast" role="status" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-message" id="toast-message">Tersalin ke papan klip!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
